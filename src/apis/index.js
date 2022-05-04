@@ -1,10 +1,7 @@
 import * as test from './TestApi'
-
-import * as login from "./LoginApi";
-import * as register from "./RegisterApi";
+import * as user from './UserApi'
 
 export default {
   test,
-  login,
-  register,
+  user,
 };
