@@ -28,5 +28,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 | Api | method | url | field | desc | 
 |----|:----:|:----:|:----:|:----:|
-| user |    |   |   |    |
+| User |    |   |   |    |
 | login | post | /userLogin | {identityId, password} | 登录请求 |
