@@ -27,6 +27,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## API接口说明
 
 | Api | method | url | field | desc | 
-|----|----|----|----|----|
+|----|:----:|:----:|:----:|:----:|
 | user |    |   |   |    |
 | login | post | /userLogin | {identityId, password} | 登录请求 |
