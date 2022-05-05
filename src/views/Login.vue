@@ -4,7 +4,10 @@
 
 <script>
   export default {
-    name: ""
+    name: "Login",
+    mounted() {
+      console.log("login page 输出---->", this.$store.state.weather2);
+    }
   };
 </script>
 

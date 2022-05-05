@@ -18,6 +18,7 @@ Axios.interceptors.request.use(req => {
 Axios.interceptors.response.use(res => {
   return res;
 }, err => {
+  console.log(err);
   return Promise.reject(err);
 });
 
@@ -25,9 +26,6 @@ Axios.interceptors.response.use(res => {
 const request = async function(options = {}, bind, callback) {
   Object.assign(axiosConfigure, options); // 合并配置项
   const res = await Axios(axiosConfigure); // 发出ajax请求
-  if (!res) {
-    return Promise.reject(new Error("请求获取失败！"));
-  }
   this[bind] = res.data;  // 为this上的某个变量绑定值
   if (typeof callback === "function") callback(res.data); // 如果有回调，就将值传入回调并使用回调函数
 };
