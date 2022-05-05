@@ -17,27 +17,30 @@
       };
     },
     methods: {
-      // 无参请求
+      //region 无参请求示例
       async fetchTest() {
         await this.$request.call(this, apis.test.jokeTest, "jokes", (data) => {
-          // console.log(data);  // 第一种方式获取数据
+          // console.log(data);  // 第一种方式获取数据（使用回调）
         });
-        setTimeout(this.getData);  // 第二种方式获取数据
+        setTimeout(this.getData);  // 第二种方式获取数据（添加宏任务）
       },
       getData: function() {
         // console.log(this.jokes);
       },
+      //endregion
 
-      // 有参请求
+      //region 有参请求示例
       async fetchTest2() {
         const obj = { params: { city: "襄阳" } }; // 设置参数
         Object.assign(apis.test.weatherTest, obj); // 合并对象。将obj中的键值对浅拷贝weatherTest对象中
         await this.$request.call(this, apis.test.weatherTest, "weather", (data) => {
           console.log("App variable 输出---->", data);
+
           this.setWeather2(data);  // 设置vuex的state对象
           console.log("vuex variable 输出---->",this.weather2);
         });
       },
+      //endregion
 
       ...mapMutations(["setJoke2", "setWeather2"])
     },

@@ -1,13 +1,12 @@
 <template>
-  <div id="login"></div>
+  <div id="login">
+    {{ $store.state.weather2 }}
+  </div>
 </template>
 
 <script>
   export default {
-    name: "Login",
-    mounted() {
-      console.log("login page 输出---->", this.$store.state.weather2);
-    }
+    name: "Login"
   };
 </script>
 

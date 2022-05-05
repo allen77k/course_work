@@ -22,7 +22,7 @@ Axios.interceptors.response.use(res => {
   return Promise.reject(err);
 });
 
-// 封装后的请求函数
+// 请求函数
 const request = async function(options = {}, bind, callback) {
   Object.assign(axiosConfigure, options); // 合并配置项
   const res = await Axios(axiosConfigure); // 发出ajax请求
