@@ -14,7 +14,8 @@
     data() {
       return {
         joke: "",
-        weather: ""
+        weather: "",
+        featureData: ""
       };
     },
     methods: {
@@ -42,6 +43,11 @@
       },
       //endregion
 
+      async feature() {
+        this.featureData = await this.$request.call(this, apis.Test.joke); // 第三种方式获取数据
+        console.log(this.featureData);
+      },
+
       ...mapMutations(["setJoke2", "setWeather2"])
     },
     computed: {
@@ -50,9 +56,13 @@
     created() {
       this.fetchTest();
       this.fetchTest2();
+      this.feature();
     },
     mounted() {
-
+      // 第三种方式获取数据
+      // this.$request.call(this, apis.Test.joke).then(data => {
+      //   console.log(data);
+      // });
     }
   };
 </script>
