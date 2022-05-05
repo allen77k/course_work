@@ -24,8 +24,10 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-| Api |参数|描述| 
+## API接口说明
+
+| Api | method | url | desc | 
 |-----|----|---|
-| user | | |
-| login | {method:'post', url:'/userLogin'} | 登录请求 |
-| register | {method:'post', url:'/userRegister'} | 注册用户请求 |
+| user|
+| login | post | /userLogin | 登录请求 |
+| register | post | /userRegister | 注册用户请求 |
