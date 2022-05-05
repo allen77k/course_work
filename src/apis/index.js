@@ -1,7 +1,7 @@
-import * as test from './TestApi'
-import * as user from './UserApi'
+import * as Test from './TestApi'
+import * as User from './UserApi'
 
 export default {
-  test,
-  user,
+  Test,
+  User,
 };
